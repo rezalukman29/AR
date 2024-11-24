@@ -10,22 +10,21 @@
   <body>
     <a-scene embedded arjs>
       <a-assets>
-        <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+        <a-asset-item
+          id="insect"
+          src="https://rezalukman29.github.io/AR/scene.gltf"
+        ></a-asset-item>
       </a-assets>
       <a-marker preset="hiro">
-        <!-- <a-entity
-          geometry="primitive: box"
-          material="color:red"
-          animation="property:rotation;from: 0 0 0;to: 360 0 0;dur: 3000; loop: true"
+        <a-entity
+          gltf-model="#insect"
           position="0 0.5 0"
-        >
-        </a-entity> -->
-
-
-        <a-entity gltf-model="#cityModel" position="0 0.5 0"></a-entity>
-        <!-- <img id="my-image" src="https://rezalukman29.github.io/AR/fotoku.jpg"/> -->
-        <a-image src="https://rezalukman29.github.io/AR/fotoku.jpg" position="1 1.5 1"></a-image>
-        <!-- <a-box material="color:yellow" position="1 1.5 1"  animation="property:rotation;from: 0 0 0;to: 0 360 360;dur: 10000; loop: true"> </a-box> -->
+          animation="property:rotation;from: 0 0 0;to: 0 360 360;dur: 3500; loop: true"
+        ></a-entity>
+        <a-image
+          src="https://rezalukman29.github.io/AR/fotoku.jpg"
+          position="1 1.5 1"
+        ></a-image>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
