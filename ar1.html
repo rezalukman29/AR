@@ -9,10 +9,8 @@
   </head>
   <body>
     <a-scene embedded arjs>
+
       <a-marker preset="hiro">
-        <a-assets>
-          <img id="my-image" src="https://rezalukman29.github.io/AR/fotoku.jpg">
-        </a-assets>
         <a-entity
           geometry="primitive: box"
           material="color:red"
@@ -20,6 +18,8 @@
           position="0 0.5 0"
         >
         </a-entity>
+        <!-- <img id="my-image" src="https://rezalukman29.github.io/AR/fotoku.jpg"/> -->
+        <a-image src="https://rezalukman29.github.io/AR/fotoku.jpg" position="1 1.5 1"></a-image>
         <!-- <a-box material="color:yellow" position="1 1.5 1"  animation="property:rotation;from: 0 0 0;to: 0 360 360;dur: 10000; loop: true"> </a-box> -->
       </a-marker>
       <a-entity camera></a-entity>
