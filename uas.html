@@ -20,15 +20,17 @@
       </a-assets>
       <a-marker preset="custom" type="pattern" url="assets/marker-dragon2.patt">
         <a-entity
-          id="gorilla"
-          position="1 0 0"
-          scale="0.5 0.5 0.5"
+          id="kingkong"
+          position="0 0.5 0"
+          scale="11 15 11"
+          animation-mixer="loop: repeat"
           gltf-model="#gorilla"
+          gesture-handler
           animation="property: rotation; 
-                            to: 0 365 0; 
-                            dur: 6500; 
-                            easing: linear; 
-                            loop: true"
+                        to: 0 360 0; 
+                        dur: 6500; 
+                        easing: linear; 
+                        loop: true"
         ></a-entity>
         <a-entity
           id="dasar"
@@ -48,7 +50,7 @@
     <script>
       const marker = document.querySelector("a-marker");
       const soundEntity = document.querySelector("a-sound");
-      const bowserModel = document.getElementById("gorilla");
+      const bowserModel = document.getElementById("kingkong");
       const bowserModel1 = document.getElementById("dasar");
 
       marker.addEventListener("markerFound", () => {
