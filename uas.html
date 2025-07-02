@@ -14,25 +14,22 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
       <a-assets>
-        <!-- <a-asset-item id="dragon" src="dragon/scene.gltf"></a-asset-item> -->
+        <a-asset-item id="gorilla" src="gorilla/scene.gltf"></a-asset-item>
         <a-asset-item id="dragon" src="assets/scene.gltf"></a-asset-item>
         <audio id="music" src="assets/dragon-roar.mp3" preload="auto"></audio>
       </a-assets>
       <a-marker preset="custom" type="pattern" url="assets/marker-dragon2.patt">
-        <!-- <a-entity
-          id="dragon"
+        <a-entity
+          id="gorilla"
           position="0 0.5 0"
-          scale="0.1 0.1 0.1"
-          animation-mixer="loop: repeat"
+          scale="0.5 0.5 0.5"
           gltf-model="#dragon"
-          gesture-handler
           animation="property: rotation; 
-                        to: 0 360 0; 
-                        dur: 6500; 
-                        easing: linear; 
-                        loop: true"
-        ></a-entity> -->
-
+                            to: 0 365 0; 
+                            dur: 6500; 
+                            easing: linear; 
+                            loop: true"
+        ></a-entity>
         <a-entity
           id="dasar"
           position="0 0 0"
@@ -51,7 +48,7 @@
     <script>
       const marker = document.querySelector("a-marker");
       const soundEntity = document.querySelector("a-sound");
-      // const bowserModel = document.getElementById("dragon");
+      const bowserModel = document.getElementById("gorilla");
       const bowserModel1 = document.getElementById("dasar");
 
       marker.addEventListener("markerFound", () => {
